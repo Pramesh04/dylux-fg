@@ -118,9 +118,9 @@ async function clearTmp() {
 }
 setInterval(async () => {
 	var a = await clearTmp()
-	console.log(chalk.cyan(`🫂  TIKAK HITAPAN  | Se limpio la carpeta tmp`))
+	console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
 }, 60000) //1 munto
-//N B
+
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin } = update
   if (isNewLogin) conn.isInit = true
