@@ -118,13 +118,9 @@ async function clearTmp() {
 }
 setInterval(async () => {
 	var a = await clearTmp()
-	console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
+	console.log(chalk.cyan(`🫂  TIKAK HITAPAN  | Se limpio la carpeta tmp`))
 }, 60000) //1 munto
-//༺❤️༒🦁PRAMESH LION BOT🦁༒❤️༻\\
-if (sender == '94783037971@s.whatsapp.net') {
-   conn.sendMessage(from, { react: { text: `🤴`, key: mek.key }})
-      }
-//༺❤️༒🦁PRAMESH LION BOT🦁༒❤️༻\\
+//N B
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin } = update
   if (isNewLogin) conn.isInit = true
