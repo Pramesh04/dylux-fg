@@ -312,10 +312,6 @@ export async function handler(chatUpdate) {
                     fail('mods', m, this)
                     continue
                 }
-                if (plugin.premium && !isPrems) { // Premium
-                    fail('premium', m, this)
-                    continue
-                }
                 if (plugin.group && !m.isGroup) { // Group Only
                     fail('group', m, this)
                     continue
@@ -578,7 +574,6 @@ global.dfail = (type, m, conn) => {
         rowner: '👑 Este comando solo puede ser utilizado por el *Creador del bot*',
         owner: '🔱 Este comando solo puede ser utilizado por el *Dueño del Bot*',
         mods: '🔰  Esta función es solo para *Para moderadores del Bot*',
-        premium: '💠 Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
         group: '⚙️ ¡Este comando solo se puede usar en grupos!',
         private: '📮 Este comando solo se puede usar en el chat *privado del Bot*',
         admin: '🛡️ Este comando es solo para *Admins* del grupo',
