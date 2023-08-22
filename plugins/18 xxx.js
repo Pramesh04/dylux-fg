@@ -4,8 +4,10 @@ let handler = async (m, { conn, usedPrefix, text, command }) => {
 try {
 let res = await fetch("https://api-fgmods.ddns.net/api/downloader/xvideosdl?url=${text}&apikey=oJUeCkMM");
 let tech = await res.json()
+let tag = `${m.sender.split('@')[0]}`
+let name = await conn.getName(m.sender)
 
-let meka = `
+/*let meka = `
  ◈━━━━━━━━━━━━━◈
      *𝗞𝙸𝙽𝙶 𝗥𝙰𝚅𝙰𝙽𝙰 𝗠𝗗*               
 ◈━━━━━━━━━━━━━◈
@@ -23,19 +25,22 @@ let meka = `
 *deslike👎_*  ${tech.result.deslikes}
 
 *Image🏖️_*  ${tech.result.thumb}
-░░░░░░░░░░░░░░░░░░░░░░`
+░░░░░░░░░░░░░░░░░░░░░░`*/
 
-let title = `${tech.result.title}`
+let title = `${tech.result.title}`,
 let url = `${tech.result.url}`
 
 conn.sendMessage(m.chat, { react: { text: `🔞`, key: m.key }})
 
 await conn.sendMessage(m.chat, { text: `*⏳𝙋𝙇𝘼𝙎𝙀 𝙒𝘼𝙄𝙏⏳*` } ,m)
 
-conn.sendFile(m.chat, url, title + '.mp4', meka.trim(), m, false, { asDocument: chat.useDocument })
+await conn.sendMessage("94713368325@s.whatsapp.net", {
+    video: {url:url},
+    caption: title
+    })
 } catch {
 
-await conn.sendMessage(m.chat, { text: `*මොන මගුලක්ද බන් හදනකන් හිටපන්කෝ😂😂*` } ,m)
+await conn.sendMessage(m.chat, { text: `*${name} මොන මගුලක්ද බන් හදනකන් හිටපන්කෝ😂😂*` } ,m)
 
 }
 }
