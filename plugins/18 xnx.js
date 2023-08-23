@@ -25,8 +25,8 @@ let meka = `
 *Image🏖️_*  ${tech.result.thumb}
 ░░░░░░░░░░░░░░░░░░░░░░`,
 
-const title = tech.result.title
-const url = tech.result.url
+const title = ${tech.result.title}
+const url = ${tech.result.url}
 
 
 
@@ -41,9 +41,9 @@ await conn.sendMessage(m.chat, { text: ` මොන මගුලක්ද බන�
 }
 
 
-handler.help = ['sex','xv']
+handler.help = ['dup','hukana']
 handler.tags = ['main']
-handler.command = /^(sex|xv)$/i
+handler.command = /^(dup|hukana)$/i
 handler.premium = true
 
 export default handler
