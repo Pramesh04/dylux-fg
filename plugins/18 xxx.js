@@ -4,8 +4,6 @@ let handler = async (m, { conn, usedPrefix, text, command }) => {
 try {
 let res = await fetch("https://api-fgmods.ddns.net/api/downloader/xvideosdl?url=${text}&apikey=oJUeCkMM");
 let tech = await res.json()
-let tag = `${m.sender.split('@')[0]}`
-let name = await conn.getName(m.sender)
 
 let meka = `
  ◈━━━━━━━━━━━━━◈
